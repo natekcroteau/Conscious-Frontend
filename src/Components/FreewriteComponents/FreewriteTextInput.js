@@ -30,10 +30,11 @@ export default function FreewriteTextInput(props) {
       body: JSON.stringify({
         "freewrites":{
           "date": date,
-          "time": date,
           "entry": freewriteText,
           "user_id": 1
-          }})
+        }
+      })
+      //loading animation replaces component?  
     })
   }
 
@@ -48,7 +49,6 @@ export default function FreewriteTextInput(props) {
             setText(data)
           }}
         />
-        {console.log(date)}
         {displayWordCount()}
         <button type="submit" onClick={submitEntry}>Submit</button>
       </div>
