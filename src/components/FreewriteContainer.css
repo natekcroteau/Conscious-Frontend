@@ -1,0 +1,8 @@
+.freewrite-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
+  border: 1px solid royalblue;
+  width: auto;
+  height: 512px;
+}
