@@ -1,15 +1,16 @@
 import './App.css'
-import HomeContainer from "./components/HomeContainer";
-import GratitudeContainer from './components/GratitudeContainer'
-import FreewriteContainer from './components/FreewriteContainer'
-import MyAccount from './components/MyAccount'
+import HomeContainer from "./Components/HomeComponents/HomeContainer"
+import GratitudeContainer from './Components/GratitudeComponents/GratitudeContainer'
+import FreewriteContainer from './Components/FreewriteComponents/FreewriteContainer'
+import MyAccountHeader from './Components/AccountHeaderComponents/MyAccountHeader'
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+
 
 function App() {
   return (
     <>
-    <MyAccount />
+    <MyAccountHeader />
     <Router>
       <Switch>
         <Route exact path="/">
