@@ -8,7 +8,7 @@ export default function GratitudeFormMorning(props) {
   let [entry2, setEntry2] = useState("")
   let [entry3, setEntry3] = useState("")
 
-  const { date } = props
+  const { date, userID } = props
 
   const postGratitude = (event) => {
     fetch('http://localhost:3000/gratitudes', {
@@ -19,7 +19,7 @@ export default function GratitudeFormMorning(props) {
       body: JSON.stringify({
         "gratitudes":{
           "date": date,
-          "user_id": 1,
+          "user_id": userID,
           "entry1": entry1, 
           "entry2": entry2,
           "entry3": entry3,

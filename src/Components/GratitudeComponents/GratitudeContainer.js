@@ -6,7 +6,8 @@ import GratitudeFormMorning from './GratitudeFormMorning'
 // import GratitudeFormEvening from './GratitudeFormEvening'
 
 
-export default function GratitudeContainer() {
+export default function GratitudeContainer(props) {
+  const { userID, username } = props
   const [value, onChange] = useState(new Date())
 // const displayRelevantGratitudeForm = () => {
 //   if(){
@@ -22,7 +23,7 @@ export default function GratitudeContainer() {
       <div className={"gratitude-container"}>
         <Calendar className="calendar" onChange={onChange} value={value} />
         {/* {displayRelevantGratitudeForm()} */}
-        <GratitudeFormMorning date={value}/>
+        <GratitudeFormMorning userID={userID} username={username} date={value}/>
         {/* <GratitudeFormEvening /> */}
       </div>
     </>

@@ -6,11 +6,22 @@ import TitleHeader from './TitleHeader'
 import 'antd/dist/antd.css';
 
 
-export default function MyAccountHeader() {
+export default function MyAccountHeader(props) {
+
+  const { userInformation } = props
+
 
   const showForms = () => {
-    return <MyAccount closeModal={handleOk} />
+    if(localStorage.token){
+      return <>
+              <h2>Logged In!</h2>
+              <Button onClick={logOut}>Logout</Button>
+            </>
+    }else{
+    return <MyAccount userInformation={userInformation} closeModal={handleOk} />
+    }
   }
+
 
     const [isModalVisible, setIsModalVisible] = useState(false);
   
@@ -26,7 +37,10 @@ export default function MyAccountHeader() {
       setIsModalVisible(false)
     }
 
-
+    const logOut = () => {
+      localStorage.removeItem('token')
+      handleOk()
+    }
 
 
   return (

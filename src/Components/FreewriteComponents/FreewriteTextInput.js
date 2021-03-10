@@ -8,7 +8,7 @@ import 'antd/dist/antd.css';
 export default function FreewriteTextInput(props) {
   const [freewriteText, setText] = useState('')
 
-  const { date } = props
+  const { date, userID } = props
 
   const displayWordCount = () => {
     let wordCount = freewriteText.split(' ').length
@@ -31,7 +31,7 @@ export default function FreewriteTextInput(props) {
         "freewrites":{
           "date": date,
           "entry": freewriteText,
-          "user_id": 1
+          "user_id": userID
         }
       })
       //loading animation replaces component?  
