@@ -20,7 +20,7 @@ export default function GratitudeContainer() {
   return (
     <>
       <div className={"gratitude-container"}>
-        <Calendar onChange={onChange} value={value} />
+        <Calendar className="calendar" onChange={onChange} value={value} />
         {/* {displayRelevantGratitudeForm()} */}
         <GratitudeFormMorning date={value}/>
         {/* <GratitudeFormEvening /> */}

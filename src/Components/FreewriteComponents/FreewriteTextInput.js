@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import './FreewriteTextInput.css'
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import { Button } from 'antd'
+import 'antd/dist/antd.css';
 
 export default function FreewriteTextInput(props) {
   const [freewriteText, setText] = useState('')
@@ -48,7 +50,7 @@ export default function FreewriteTextInput(props) {
             setText(data)
           }}
         />
-        <button className="submit-button" type="submit" onClick={submitEntry}>Submit</button>
+        <Button className="submit-button" type="primary" onClick={submitEntry}>Submit</Button>
       </div>
       
     </div>

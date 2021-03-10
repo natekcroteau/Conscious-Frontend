@@ -1,7 +1,10 @@
 import React, {useState } from 'react'
 import './MyAccount.css'
+import { Button } from 'antd'
 
-export default function MyAccount() {
+export default function MyAccount(props) {
+
+const { closeModal } = props
 
 let [username, setUsername] = useState('')
 let [password, setPassword] = useState('')
@@ -26,6 +29,7 @@ const login = () => {
       password: password
     })
   })
+  .then(closeModal())
 }
 
 const signUp = () => {
@@ -41,6 +45,7 @@ const signUp = () => {
       }
     })
   })
+  .then(closeModal())
 }
 
 
@@ -49,11 +54,11 @@ const signUp = () => {
     <>
       <form className="my-account-form">
         <label>Username</label>
-        <input type="text" name="username" value={username} onChange={handleUsername} ></input>
+        <input className="account-form" type="text" name="username" value={username} onChange={handleUsername} ></input>
         <label>Password</label>
-        <input type="password" name="password" value={password} onChange={handlePassword} ></input>
-        <button onClick={login}>Login</button>
-        <button onClick={signUp}>Sign Up</button>
+        <input className="account-form" type="password" name="password" value={password} onChange={handlePassword} ></input>
+        <Button type="primary" onClick={login}>Login</Button>
+        <Button type="primary" onClick={signUp}>Sign Up</Button>
       </form>
     </>
   )

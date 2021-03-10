@@ -1,4 +1,11 @@
 .my-account-form{
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 256px;
+
+}
+.account-form{
+  max-height: 24px;
 }

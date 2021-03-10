@@ -1,6 +1,13 @@
 .gratitude-container {
   height: 512px;
+  width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+
+.calendar{
+  max-height: 267px;
+
 }

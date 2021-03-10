@@ -1,13 +1,12 @@
 .ck-editor__editable_inline {
   min-height: 360px;
-  max-width: 616px;
+  max-width: auto;
 }
 
 .freewrite-text-input{
   display: flex;
   flex-direction: column;
+  align-self: center;
 }
 
-.submit-button{
-  
-}
+

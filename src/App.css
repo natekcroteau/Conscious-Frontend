@@ -1,6 +1,6 @@
 
-nav {
-  margin-top: 128px;
+.nav {
+
   display: flex;
   justify-content: center;
   width: 100%;
@@ -23,5 +23,5 @@ background: linear-gradient(0deg, rgba(241,201,89,1) 0%, rgba(129,18,238,0.99763
 .link{
   text-decoration: none;
   font-size: 56px;
-  color: rgba(112, 91, 214, 0.801);
+  color: rgba(111, 91, 214, 0.897);
 }

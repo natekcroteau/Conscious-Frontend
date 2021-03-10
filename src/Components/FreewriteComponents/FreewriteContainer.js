@@ -8,7 +8,7 @@ export default function FreewriteContainer() {
   const [value, onChange] = useState(new Date())
   return (
     <div className={"freewrite-container"}>
-      <Calendar onChange={onChange} value={value} />
+      <Calendar className="calendar" onChange={onChange} value={value} />
       <FreewriteTextInput date={value}/>
     </div>
   )

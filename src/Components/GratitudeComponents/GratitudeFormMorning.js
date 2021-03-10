@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import './GratitudeFormMorning.css'
+import { Button } from 'antd'
+import 'antd/dist/antd.css';
 
 export default function GratitudeFormMorning(props) {
   let [entry1, setEntry1] = useState("")
@@ -52,7 +54,7 @@ export default function GratitudeFormMorning(props) {
       <label>I am ...</label>
       <input type="text" name="entry3" value={entry3} onChange={handleChange3}></input>
       
-      <input type="submit" value="Submit Morning Gratitude" onClick={postGratitude}/>
+      <Button type="primary" onClick={postGratitude}>Submit Gratitude</Button>
     </form>
   )
 }
