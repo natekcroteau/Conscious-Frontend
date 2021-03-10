@@ -8,18 +8,16 @@ export default function FreewriteTextInput(props) {
 
   const { date } = props
 
-  let baseline = (freewriteText.length - 7)
-
   const displayWordCount = () => {
-    if(baseline < 0){
-      return <p>0</p>
+    let wordCount = freewriteText.split(' ').length
+
+    if(wordCount <= 1){
+      return <p>0 words</p>
     }else{
-      return <p>{baseline}</p>
+      return <p>{wordCount} words</p>
     }
   }
 
-  // const newDate = date.slice(4, 14)
-  
 
   const submitEntry = (event) => {
     fetch('http://localhost:3000/freewrites', {
@@ -40,6 +38,7 @@ export default function FreewriteTextInput(props) {
 
   return (
     <div className="freewrite-text-input" >
+      {displayWordCount()}
       <div className="editor">
         <CKEditor 
           editor={ClassicEditor}
@@ -49,8 +48,7 @@ export default function FreewriteTextInput(props) {
             setText(data)
           }}
         />
-        {displayWordCount()}
-        <button type="submit" onClick={submitEntry}>Submit</button>
+        <button className="submit-button" type="submit" onClick={submitEntry}>Submit</button>
       </div>
       
     </div>

@@ -1,15 +1,17 @@
 
 nav {
+  margin-top: 128px;
   display: flex;
   justify-content: center;
   width: 100%;
   height: 128px;
-  
   font-size: 56px;
+  color: rgb(223, 222, 228);
 }
 
 body {
   background: rgb(182,172,219);
+  height: 1028px;
   background: linear-gradient(0deg, rgba(182,172,219,1) 0%, rgba(255,227,177,0.8687850140056023) 100%);
 }
 
@@ -17,3 +19,9 @@ body {
   background: rgb(241,201,89);
 background: linear-gradient(0deg, rgba(241,201,89,1) 0%, rgba(129,18,238,0.9976365546218487) 22%);
 } */
+
+.link{
+  text-decoration: none;
+  font-size: 56px;
+  color: rgba(112, 91, 214, 0.801);
+}

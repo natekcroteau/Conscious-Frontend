@@ -51,6 +51,7 @@ export default function GratitudeFormMorning(props) {
 
       <label>I am ...</label>
       <input type="text" name="entry3" value={entry3} onChange={handleChange3}></input>
+      
       <input type="submit" value="Submit Morning Gratitude" onClick={postGratitude}/>
     </form>
   )

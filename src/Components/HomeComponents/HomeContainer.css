@@ -1,6 +1,5 @@
 .home-container {
-  border: 2px solid red;
-  width: auto;
+  width: 100%;
   height: 512px;
 }
 

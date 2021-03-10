@@ -23,7 +23,7 @@ function App() {
           <FreewriteContainer />
         </Route>
       </Switch>
-      <nav><Link to="/gratitude">Daily Gratitude</Link> | <Link to="/">Home</Link> | <Link to="/freewrite">Morning Free-write</Link> </nav>
+      <nav ><Link className="link" to="/gratitude">Daily Gratitude</Link> | <Link className="link" to="/">Home</Link> | <Link className="link" to="/freewrite">Morning Free-write</Link> </nav>
     </Router>
     </>
   );

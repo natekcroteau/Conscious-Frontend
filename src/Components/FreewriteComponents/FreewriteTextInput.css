@@ -1,4 +1,13 @@
 .ck-editor__editable_inline {
-  min-height: 400px;
-  color: rgb(160, 117, 9);
+  min-height: 360px;
+  max-width: 616px;
+}
+
+.freewrite-text-input{
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-button{
+  
 }

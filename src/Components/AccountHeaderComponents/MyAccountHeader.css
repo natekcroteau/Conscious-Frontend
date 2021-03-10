@@ -1,6 +1,8 @@
 .account-header {
   height: 128px;
   width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .account-header h1 {
