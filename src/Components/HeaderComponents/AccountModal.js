@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
 import { Modal, Button } from 'antd'
-import './MyAccountHeader.css'
-import MyAccount from './MyAccount'
-import TitleHeader from './TitleHeader'
+import { UserOutlined } from '@ant-design/icons'
+import Account from './Account'
+import './AccountModal.css'
 import 'antd/dist/antd.css';
 
 
-export default function MyAccountHeader(props) {
+
+
+export default function AccountModal(props) {
 
   const { userInformation } = props
-
 
   const showForms = () => {
     if(localStorage.token){
@@ -18,10 +19,9 @@ export default function MyAccountHeader(props) {
               <Button onClick={logOut}>Logout</Button>
             </>
     }else{
-    return <MyAccount userInformation={userInformation} closeModal={handleOk} />
+    return <Account userInformation={userInformation} handleOk={handleOk} />
     }
   }
-
 
     const [isModalVisible, setIsModalVisible] = useState(false);
   
@@ -45,9 +45,8 @@ export default function MyAccountHeader(props) {
 
   return (
     <div className="account-header">
-      <TitleHeader/>
       <Button className="account-button" type="primary" onClick={showModal}>
-        Account
+        <UserOutlined />
       </Button>
       <Modal title="Account" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
         {showForms()}

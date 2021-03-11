@@ -1,0 +1,7 @@
+.header-container{
+  height: 160px;
+  width: auto;
+  display: flex;
+  justify-content: space-evenly;
+
+}

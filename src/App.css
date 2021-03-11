@@ -4,19 +4,12 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
+  width: 564px;
   height: 128px;
   font-size: 32px;
   color: rgb(194, 193, 199);
   margin-top: -40px;
 }
-
-body {
-  height: 1028px;
-  /* background: rgb(84,163,240);
-  background: linear-gradient(0deg, rgba(84,163,240,0.9976365546218487) 22%, rgba(236,230,215,1) 80%); */
-}
-
 
 .link{
   font-size: 24px;

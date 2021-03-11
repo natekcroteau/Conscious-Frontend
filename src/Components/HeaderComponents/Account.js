@@ -1,10 +1,10 @@
 import React, {useState } from 'react'
-import './MyAccount.css'
+import './Account.css'
 import { Button } from 'antd'
 
 export default function MyAccount(props) {
 
-const { closeModal, userInformation } = props
+const { handleOk, userInformation } = props
 
 let [username, setUsername] = useState('')
 let [password, setPassword] = useState('')
@@ -16,7 +16,6 @@ const handleUsername = (event) => {
 const handlePassword = (event) => {
   setPassword(password = event.target.value)
 }
-
 
 const login = () => {
   fetch('http://localhost:3000/login', {
@@ -37,9 +36,8 @@ const login = () => {
   }).catch( error => {
     console.log(error.message)
   })
-  .then(closeModal())
+  .then(handleOk())
 }
-
 
 const signUp = () => {
   fetch('http://localhost:3000/users', {
@@ -54,9 +52,8 @@ const signUp = () => {
       }
     })
   })
-  .then(closeModal())
+  .then(handleOk())
 }
-
 
   return (
     <>
@@ -67,18 +64,7 @@ const signUp = () => {
         <input className="account-form" type="password" name="password" value={password} onChange={handlePassword} ></input>
         <Button type="primary" onClick={login}>Login</Button>
         <Button type="primary" onClick={signUp}>Sign Up</Button>
-        
       </form>
     </>
   )
 }
-
-// const displayWordCount = () => {
-//   let wordCount = freewriteText.split(' ').length
-
-//   if(wordCount <= 1){
-//     return <p>0 words</p>
-//   }else{
-//     return <p>{wordCount} words</p>
-//   }
-// }
