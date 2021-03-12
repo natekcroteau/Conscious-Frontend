@@ -6,7 +6,7 @@
 .freewrite-text-input{
   display: flex;
   flex-direction: column;
-  align-self: center;
+  justify-content: center;
 }
 
 

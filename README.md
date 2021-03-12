@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# CONSCIOUS
+> Practice Mental Wellbeing
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## General Info
+Conscious is an application to exercise your mental wellbeing through writing. 
 
-In the project directory, you can run:
+## Intro Video
+[Coming Soon]()
 
-### `yarn start`
+## Technologies
+* Ruby - v 2.6.5
+* Rails - v 6.1.3
+  * JWT
+  * Bcrypt
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* React.js
+  * React-Router
+  * React-Calendar
+  * React-Spring
+  * React-Typist
+  * CKEditor
+  * Ant-Design
+* HTML
+* CSS
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## Setup
+To utilize Conscious, install locally using the following command:
+```
+git clone git@github.com:natekcroteau/
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Backend setup:
+```
+bundle install
+rails db:migrate
+```
 
-### `yarn build`
+Frontend setup:
+```
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the backend, then frontend server with the following commands in the respective directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Backend: 
+```
+rails s
+```
+* Frontend:
+```
+npm start
+```
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Code Example
+```
+const login = () => {
+  fetch('http://localhost:3000/login', {
+    method: "POST",
+    headers: {
+      "content-type": "application/json"
+    },
+    body: JSON.stringify({
+      username: username,
+      password: password
+    })
+  }).then( response => {
+    if (!response.ok) throw new Error('Invalid Username and/or Password')
+    return response.json()
+  }).then(response => {
+    userInformation(response.user, response.username)
+    localStorage.setItem("token", response.token)
+  }).then(handleOk())
+      .catch( error => {
+        console.log(error.message)
+      })
+}
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Features
+* Create users and sign-in with authentication through the account modal.
+* User must be logged-in to utilize daily gratitude and morning free-write components.
+* The daily gratitude component prompts the user with gratitude-reinforcing statements, to which the user submits their response. Ideally, this function is used in the morning and evening to reflect positively on one's self.
+* The freewriting component allows the user to input and submit text representing their thoughts in real-time, without stopping. This is akin to the popular "Morning Pages" exercise.
+    * Word count is dynamically displayed above text-input.
+* Animated story of "The Golden Buddha".
+* The user is able to remove local authentication by logging out through the account modal.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## To-do list:
+* Develop user interface displaying statistical feedback for users.
+* Develop morning/evening toggle for daily gratitude form rendering. Currently, this is static.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Status
+Project functions as intended with expansion to features planned.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Inspiration
+Wellness is part physical and part mental, to which finding balance in exercising both aspects can be difficult and nuanced. CONSCIOUS is an application combinining valuable writing practices that exercise mental wellbeing.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact
+Created by [Nate Croteau](https://github.com/natekcroteau)

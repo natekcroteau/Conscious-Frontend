@@ -41,7 +41,7 @@ export default function Story() {
 
   return (
     <div className="story-page">
-      <h2>The Story of the Golden Buddha</h2>
+      <h2>The Story Of The Golden Buddha</h2>
       <div className="story-div-zero">
         {beginStory()}
         {secondStory()}

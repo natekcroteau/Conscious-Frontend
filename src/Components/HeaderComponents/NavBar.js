@@ -33,7 +33,7 @@ export default function NavBar(props) {
   return (
     <div className="nav-container">
       <Router>
-      <nav className="nav" ><Link className="link" to="/">Home</Link> | <Link className="link" to="/gratitude">Daily Gratitude</Link> | <Link className="link" to="/freewrite">Morning Free-write</Link> | <Link className="link" to="/goldenBuddha">Story of the Golden Buddha</Link></nav>
+      <nav className="nav" ><Link className="link" to="/">Home</Link> | <Link className="link" to="/gratitude">Daily Gratitude</Link> | <Link className="link" to="/freewrite">Morning Freewrite</Link> | <Link className="link" to="/goldenBuddha">Story of the Golden Buddha</Link></nav>
         <Switch>
           <Route exact path="/">
             <HomeContainer />

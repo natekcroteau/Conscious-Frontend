@@ -9,22 +9,15 @@ import GratitudeFormMorning from './GratitudeFormMorning'
 export default function GratitudeContainer(props) {
   const { userID, username } = props
   const [value, onChange] = useState(new Date())
-// const displayRelevantGratitudeForm = () => {
-//   if(){
-//     return <GratitudeFormMorning />
-//   }else{
-//     return <GratitudeFormEvening />
-//   }
-// }
-//conditional per themeswitch for morning vs evening
+
 
   return (
     <>
       <div className={"gratitude-container"}>
         <Calendar className="calendar" onChange={onChange} value={value} />
-        {/* {displayRelevantGratitudeForm()} */}
+
         <GratitudeFormMorning userID={userID} username={username} date={value}/>
-        {/* <GratitudeFormEvening /> */}
+
       </div>
     </>
   )

@@ -6,7 +6,7 @@ import { Button } from 'antd'
 import 'antd/dist/antd.css';
 
 export default function FreewriteTextInput(props) {
-  const [freewriteText, setText] = useState('')
+  let [freewriteText, setText] = useState('')
 
   const { date, userID } = props
 
@@ -20,6 +20,9 @@ export default function FreewriteTextInput(props) {
     }
   }
 
+  const resetEditor = () => {
+    setText(freewriteText = '')
+  }
 
   const submitEntry = (event) => {
     fetch('http://localhost:3000/freewrites', {
@@ -34,8 +37,7 @@ export default function FreewriteTextInput(props) {
           "user_id": userID
         }
       })
-      //loading animation replaces component?  
-    })
+    }).then(resetEditor)
   }
 
   return (

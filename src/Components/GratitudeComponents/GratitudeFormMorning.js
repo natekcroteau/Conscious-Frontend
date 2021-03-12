@@ -25,9 +25,15 @@ export default function GratitudeFormMorning(props) {
           "entry3": entry3,
         }
       })
-      //loading animation replaces component?  
-    })
+    }).then(resetForm)
   }
+
+  const resetForm = () => {
+    setEntry1(entry1 = '')
+    setEntry2(entry2 = '')
+    setEntry3(entry3 = '')
+  }
+
 
   const handleChange1 = (event) => {
     setEntry1(entry1 = event.target.value)
@@ -44,7 +50,7 @@ export default function GratitudeFormMorning(props) {
 
 
   return (
-    <form  className="gratitude-form-morning">
+    <form className="gratitude-form-morning">
       <label>I am grateful for ...</label>
       <input autocomplete="off" type="text" name="entry1" value={entry1} onChange={handleChange1}></input>
 
@@ -54,7 +60,7 @@ export default function GratitudeFormMorning(props) {
       <label>I am ...</label>
       <input autocomplete="off" type="text" name="entry3" value={entry3} onChange={handleChange3}></input>
       
-      <Button type="primary" onClick={postGratitude}>Submit Gratitude</Button>
+      <Button  type="primary" onClick={postGratitude}>Submit Gratitude</Button>
     </form>
   )
 }
