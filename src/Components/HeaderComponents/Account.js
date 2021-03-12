@@ -9,6 +9,7 @@ const { handleOk, userInformation } = props
 let [username, setUsername] = useState('')
 let [password, setPassword] = useState('')
 
+
 const handleUsername = (event) => {
   setUsername(username = event.target.value)
 }
@@ -33,11 +34,12 @@ const login = () => {
   }).then(response => {
     userInformation(response.user, response.username)
     localStorage.setItem("token", response.token)
-  }).catch( error => {
-    console.log(error.message)
-  })
-  .then(handleOk())
+  }).then(handleOk())
+      .catch( error => {
+        console.log(error.message)
+      })
 }
+
 
 const signUp = () => {
   fetch('http://localhost:3000/users', {

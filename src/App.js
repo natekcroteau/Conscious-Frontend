@@ -1,9 +1,7 @@
 import { useState } from 'react'
-import './App.css'
 import 'antd/dist/antd.css';
 import HeaderContainer from './Components/HeaderComponents/HeaderContainer'
 import { Divider } from 'antd'
-
 
 
 function App() {
@@ -18,7 +16,7 @@ const userInformation = (id, currentUsername) => {
 
   return (
     <div>
-    <HeaderContainer userID={userID} username={username} userInformation={userInformation}/>
+    <HeaderContainer userID={userID} username={username} userInformation={userInformation} />
     <Divider />
     </div>
   );

@@ -46,13 +46,13 @@ export default function GratitudeFormMorning(props) {
   return (
     <form  className="gratitude-form-morning">
       <label>I am grateful for ...</label>
-      <input type="text" name="entry1" value={entry1} onChange={handleChange1}></input>
+      <input autocomplete="off" type="text" name="entry1" value={entry1} onChange={handleChange1}></input>
 
       <label>What would make today awesome?</label>
-      <input type="text" name="entry2" value={entry2} onChange={handleChange2}></input>
+      <input autocomplete="off" type="text" name="entry2" value={entry2} onChange={handleChange2}></input>
 
       <label>I am ...</label>
-      <input type="text" name="entry3" value={entry3} onChange={handleChange3}></input>
+      <input autocomplete="off" type="text" name="entry3" value={entry3} onChange={handleChange3}></input>
       
       <Button type="primary" onClick={postGratitude}>Submit Gratitude</Button>
     </form>
