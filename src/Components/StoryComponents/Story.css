@@ -13,21 +13,19 @@
 .story-div-one{
   width: 190px;
   height: 480px;
-  /* border: 1px solid blue; */
   display: flex;
   flex-direction: column;
   align-self: center;
-  justify-content: space-around;
+  justify-content: center;
   padding-right: 24px;
   padding-left: 24px;
 }
 .story-div-two{
   width: 190px;
   height: 480px;
-  /* border: 1px solid rgb(0, 255, 136); */
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-self: center;
   padding-right: 24px;
   padding-left: 24px;
@@ -35,10 +33,9 @@
 .story-div-three{
   width: 190px;
   height: 480px;
-  /* border: 1px solid rgb(39, 168, 177); */
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-self: center;
   padding-right: 24px;
   padding-left: 24px;
@@ -46,10 +43,9 @@
 .story-div-four{
   width: 190px;
   height: 480px;
-  /* border: 1px solid rgb(92, 27, 63); */
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-self: center;
   padding-right: 24px;
   padding-left: 24px;
@@ -57,4 +53,5 @@
 
 img{
   border-radius: 10px;
+  max-width: 142px;
 }
