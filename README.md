@@ -6,7 +6,7 @@
 Conscious is an application to exercise your mental wellbeing through writing. 
 
 ## Intro Video
-[Coming Soon]()
+[Demo Video](https://www.youtube.com/watch?v=phzMPbaX0V8)
 
 ## Technologies
 * Ruby - v 2.6.5
